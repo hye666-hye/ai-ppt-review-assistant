@@ -86,6 +86,13 @@ The current CLI prototype focuses on extracting PPT text and flagging risk terms
 - reports are generated as standalone HTML files.
 - OpenXML-level handling can be used when preserving rich text styles in PPT editing tasks.
 
+## License and third-party notices
+
+The project code is released under the MIT License. Third-party dependency licenses are summarized in [`THIRD_PARTY_NOTICES.md`](THIRD_PARTY_NOTICES.md).
+
+Demo screenshots and sample reports are included for project explanation only. See [`ASSET_NOTICE.md`](ASSET_NOTICE.md).
+
 ## Privacy note
 
 This repository only contains demo screenshots, sample reports, and code skeletons. It does not include any private thesis, report, school template, or original presentation file.
+
