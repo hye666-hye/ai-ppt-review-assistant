@@ -1,0 +1,9 @@
+﻿[project]
+name = "ai-ppt-review-assistant"
+version = "0.1.0"
+description = "AI-assisted PPT content review and source document alignment workflow."
+requires-python = ">=3.10"
+dependencies = ["python-pptx", "python-docx", "pandas", "openpyxl"]
+
+[project.scripts]
+ai-ppt-review = "ai_ppt_review_assistant.cli:main"

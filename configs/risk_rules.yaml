@@ -1,0 +1,19 @@
+﻿old_version_terms:
+  - 拟研究
+  - 计划采用
+  - 预期成果
+  - 项目进度
+  - 研究计划
+method_mismatch_terms:
+  - ORR
+  - RDE
+  - 半波电位
+overclaim_terms:
+  - 最终机制
+  - 完全证明
+  - 绝对最优
+suggested_actions:
+  keep: 内容与权威材料一致，可保留
+  revise: 内容方向正确，但需要改写或补充限制说明
+  delete: 与最终材料无关或属于旧版本残留
+  remake: 方法、数据或结构与权威材料冲突，需要重做
