@@ -3,71 +3,57 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>AI PPT 内容审查与修改助手</title>
+<title>AI PPT Review Assistant</title>
 <style>
-:root{--navy:#0b2341;--blue:#1769aa;--teal:#0e766e;--orange:#f59e0b;--bg:#f6f8fb;--line:#d8e3ee;--text:#1f2937}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font-family:Microsoft YaHei,Arial,sans-serif;line-height:1.65}header{background:linear-gradient(135deg,#07182f,#123c69 58%,#0e766e);color:#fff;padding:52px 7vw}header h1{font-size:42px;line-height:1.15;margin:0 0 14px}.lead{font-size:20px;max-width:980px;opacity:.95}.pill{display:inline-block;border:1px solid rgba(255,255,255,.38);border-radius:999px;padding:5px 12px;margin:5px 6px 0 0;background:rgba(255,255,255,.1)}main{max-width:1180px;margin:auto;padding:28px}.card{background:#fff;border:1px solid var(--line);border-radius:20px;padding:24px;margin:18px 0;box-shadow:0 8px 24px rgba(15,23,42,.06)}h2{color:var(--navy);font-size:28px;margin:0 0 12px}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.grid2{display:grid;grid-template-columns:1fr 1fr;gap:16px}.feature{border-left:5px solid var(--teal);background:#fbfdff}.feature b{color:var(--navy)}img{max-width:100%;border-radius:14px;border:1px solid var(--line);background:#fff}.shot-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}.shot p{font-size:14px;color:#526070;margin:8px 0 0}.metric{font-size:34px;font-weight:800;color:var(--teal)}pre{white-space:pre-wrap;background:#08111f;color:#dbeafe;padding:16px;border-radius:14px;overflow:auto}table{width:100%;border-collapse:collapse}th,td{border-bottom:1px solid #e5e7eb;padding:10px;text-align:left;vertical-align:top}th{background:#eef5fb;color:var(--navy)}a{color:#0b6fae}.cta{display:flex;gap:12px;flex-wrap:wrap}.btn{display:inline-block;background:var(--navy);color:#fff;text-decoration:none;border-radius:999px;padding:10px 16px}.btn.secondary{background:#e6f3f2;color:#0e766e}@media(max-width:900px){.grid,.grid2,.shot-grid{grid-template-columns:1fr}header h1{font-size:32px}main{padding:16px}}</style>
+:root{--navy:#0b2341;--blue:#1769aa;--teal:#0e766e;--orange:#f59e0b;--bg:#f6f8fb;--line:#d8e3ee;--text:#1f2937}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font-family:Microsoft YaHei,Arial,sans-serif;line-height:1.65}header{background:linear-gradient(135deg,#07182f,#123c69 58%,#0e766e);color:#fff;padding:52px 7vw}header h1{font-size:42px;line-height:1.15;margin:0 0 14px}.lead{font-size:20px;max-width:980px;opacity:.95}.pill{display:inline-block;border:1px solid rgba(255,255,255,.38);border-radius:999px;padding:5px 12px;margin:5px 6px 0 0;background:rgba(255,255,255,.1)}main{max-width:1180px;margin:auto;padding:28px}.card{background:#fff;border:1px solid var(--line);border-radius:20px;padding:24px;margin:18px 0;box-shadow:0 8px 24px rgba(15,23,42,.06)}h2{color:var(--navy);font-size:28px;margin:0 0 12px}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.grid2{display:grid;grid-template-columns:1fr 1fr;gap:16px}.feature{border-left:5px solid var(--teal);background:#fbfdff}.feature b{color:var(--navy)}img{max-width:100%;border-radius:14px;border:1px solid var(--line);background:#fff}.shot-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}.shot p{font-size:14px;color:#526070;margin:8px 0 0}pre{white-space:pre-wrap;background:#08111f;color:#dbeafe;padding:16px;border-radius:14px;overflow:auto}table{width:100%;border-collapse:collapse}th,td{border-bottom:1px solid #e5e7eb;padding:10px;text-align:left;vertical-align:top}th{background:#eef5fb;color:var(--navy)}a{color:#0b6fae}.cta{display:flex;gap:12px;flex-wrap:wrap}.btn{display:inline-block;background:var(--navy);color:#fff;text-decoration:none;border-radius:999px;padding:10px 16px}.btn.secondary{background:#e6f3f2;color:#0e766e}@media(max-width:900px){.grid,.grid2,.shot-grid{grid-template-columns:1fr}header h1{font-size:32px}main{padding:16px}}</style>
 </head>
 <body>
 <header>
-  <h1>AI PPT 内容审查与修改助手</h1>
-  <p class="lead">自动检查 PPT 与 Word / 报告内容是否一致，逐页找出旧版本残留、数据冲突、术语错误和表达风险，并生成可直接照着改的 HTML 审查报告。</p>
-  <p><span class="pill">PPT Review</span><span class="pill">Word-PPT Alignment</span><span class="pill">Office Automation</span><span class="pill">AI Workflow</span><span class="pill">HTML Report</span></p>
+  <h1>AI PPT Review Assistant</h1>
+  <p class="lead">A lightweight workflow for reviewing whether a PowerPoint deck is consistent with its source document, and for generating page-level revision suggestions.</p>
+  <p><span class="pill">PPT Review</span><span class="pill">Document Alignment</span><span class="pill">Office Automation</span><span class="pill">HTML Report</span></p>
 </header>
 <main>
 <section class="card grid2">
   <div>
-    <h2>它解决什么问题？</h2>
-    <p>PPT 经常从旧版本、开题材料、阶段汇报中复制修改而来。最终答辩或汇报前，最容易出错的不是排版，而是内容已经和最新 Word / 报告不一致。</p>
-    <ul>
-      <li>论文终稿已改，但 PPT 还保留开题阶段语言</li>
-      <li>实验路线更新了，但 PPT 仍是旧方法</li>
-      <li>数据、单位、结论和 Word 不一致</li>
-      <li>一句话被拆成多个文本框，后期修改困难</li>
-    </ul>
+    <h2>Project overview</h2>
+    <p>Presentation decks are often created from older drafts, reports, or multiple rounds of revisions. As a result, the final deck may still contain outdated plans, inconsistent metrics, incorrect methods, or conclusions that no longer match the source document.</p>
+    <p>This project provides a page-level review workflow: extract slide content, detect risky or outdated expressions, compare the deck against the source material, and generate a readable HTML report for manual revision.</p>
   </div>
   <div><img src="assets/screenshots/demo-contact-sheet.png" alt="demo overview"></div>
 </section>
 
 <section class="card">
-  <h2>核心能力</h2>
+  <h2>Core features</h2>
   <div class="grid">
-    <div class="card feature"><b>逐页审查</b><p>解析 PPT 每页标题、正文、表格和结论句，输出页级问题清单。</p></div>
-    <div class="card feature"><b>内容对齐</b><p>以 Word / 报告作为权威依据，判断 PPT 是否保留旧版本内容。</p></div>
-    <div class="card feature"><b>修改建议</b><p>给出保留、修改、删除、重做的处理方向，而不是只报错。</p></div>
-    <div class="card feature"><b>HTML 报告</b><p>生成可视化审查报告，适合用户逐页照着修改。</p></div>
-    <div class="card feature"><b>文本框修复</b><p>识别一句话被拆成多个文本框的情况，辅助合并并保留格式。</p></div>
-    <div class="card feature"><b>可扩展场景</b><p>适用于答辩、项目汇报、商业方案、课程展示和路演材料。</p></div>
+    <div class="card feature"><b>Slide text extraction</b><p>Extracts titles, text boxes, and page-level content from PPT files.</p></div>
+    <div class="card feature"><b>Risk detection</b><p>Flags outdated expressions, method mismatches, over-claimed conclusions, and suspicious terms.</p></div>
+    <div class="card feature"><b>Revision planning</b><p>Classifies issues into actions such as keep, revise, delete, or remake.</p></div>
+    <div class="card feature"><b>HTML report</b><p>Generates a readable review report that can be used as a manual editing checklist.</p></div>
+    <div class="card feature"><b>Text-box cleanup</b><p>Supports workflows for merging fragmented PPT text boxes while preserving rich text styles.</p></div>
+    <div class="card feature"><b>Configurable rules</b><p>Risk keywords and review categories can be configured for different scenarios.</p></div>
   </div>
 </section>
 
 <section class="card">
-  <h2>Demo 截图</h2>
+  <h2>Demo screenshots</h2>
   <div class="shot-grid">
-    <div class="shot"><img src="assets/screenshots/demo-structure-alignment.png"><p>结构/结果页：识别碎片化标题与页底结论句。</p></div>
-    <div class="shot"><img src="assets/screenshots/demo-result-consistency.png"><p>结果页：核对指标、单位、样品名称和主结论。</p></div>
-    <div class="shot"><img src="assets/screenshots/demo-conclusion-check.png"><p>结论页：检查旧版本残留、结论语气和下一阶段提示。</p></div>
-    <div class="shot"><img src="assets/screenshots/demo-quality-gate.png"><p>质量门禁：将页面问题转成可执行修改方向。</p></div>
+    <div class="shot"><img src="assets/screenshots/demo-structure-alignment.png"><p>Slide-level content review and text-box cleanup case.</p></div>
+    <div class="shot"><img src="assets/screenshots/demo-result-consistency.png"><p>Result slide review: metrics, units, sample names and conclusions.</p></div>
+    <div class="shot"><img src="assets/screenshots/demo-conclusion-check.png"><p>Conclusion slide review: outdated wording and over-claiming risks.</p></div>
+    <div class="shot"><img src="assets/screenshots/demo-quality-gate.png"><p>Quality gate: page-level issues and suggested actions.</p></div>
   </div>
 </section>
 
 <section class="card">
-  <h2>输出报告长什么样？</h2>
-  <p>报告按页展示：原 PPT 内容、对应依据、不一致点、修改方向和优先级。</p>
-  <div class="cta"><a class="btn" href="examples/outputs/sample_review_report.html">打开样例审查报告</a><a class="btn secondary" href="README.md">查看 README</a></div>
+  <h2>Sample report</h2>
+  <p>The sample report shows how findings are organized by slide page, issue type, priority and suggested revision.</p>
+  <div class="cta"><a class="btn" href="examples/outputs/sample_review_report.html">Open sample report</a><a class="btn secondary" href="README.md">Read README</a></div>
 </section>
 
 <section class="card">
-  <h2>技术实现</h2>
-  <table><tr><th>模块</th><th>说明</th></tr><tr><td>Word Parser</td><td>提取标题、章节、关键词、研究路线、结论和关键指标。</td></tr><tr><td>PPT Decomposer</td><td>抽取每页文本框、标题、图片/表格信息和结论句。</td></tr><tr><td>Risk Rules</td><td>识别旧版本残留、开题语言、术语漂移、单位错误和表达过度。</td></tr><tr><td>Report Generator</td><td>生成 HTML 审查报告、对齐矩阵和质量检查清单。</td></tr><tr><td>OpenXML Helper</td><td>处理 PPT 文本框合并，同时尽量保留字号、颜色、加粗和上下标。</td></tr></table>
-</section>
-
-<section class="card">
-  <h2>简历项目描述</h2>
-  <pre>AI PPT 内容审查与修改助手｜AI 办公自动化项目
-- 基于“PPT 与原始报告内容不一致”的高频办公痛点，设计了一套 AI 辅助审查流程，可自动读取 Word/报告和 PPT，逐页发现内容冲突、旧版本残留和表达风险。
-- 输出可视化 HTML 审查报告，将每页 PPT 的原文、对应依据、问题说明和修改建议结构化展示，降低人工核对成本。
-- 项目可扩展到毕业答辩、项目汇报、商业方案、投标材料和课程展示等场景。
-- 技术栈：Python、python-docx、python-pptx、OpenXML、HTML/CSS、Office 自动化、AI 工作流设计。</pre>
+  <h2>Implementation</h2>
+  <table><tr><th>Module</th><th>Description</th></tr><tr><td>PPT Decomposer</td><td>Extracts titles and text content from each slide.</td></tr><tr><td>Source Parser</td><td>Parses the source document structure and important facts.</td></tr><tr><td>Risk Rules</td><td>Detects outdated terms, method mismatches, data conflicts and over-claiming.</td></tr><tr><td>Report Generator</td><td>Produces standalone HTML reports for review and handoff.</td></tr><tr><td>OpenXML Helper</td><td>Preserves rich text styles when editing PPT text boxes.</td></tr></table>
 </section>
 </main>
 </body></html>
